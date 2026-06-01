@@ -39,3 +39,10 @@ def analyze(penguin: PenguinInput):
             confidence=pred.confidence,
             description=description
         )
+
+@app.get("/")
+def root():
+    return {
+        "message": "Penguin API is running",
+        "docs": "/docs"
+    }
